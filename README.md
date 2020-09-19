@@ -4,7 +4,7 @@ During the course of the coming weeks, we'll be building the new better Amazon, 
 
 ### As a beginning we will build the products page, to build it you have to:
 #### Build a product component that contains:
-  * img of the product
+  * img of the product ( YES )
   * Name of the product 
   * Description of the product 
   * A state that indicates the amount of this item in stock 

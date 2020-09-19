@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Products from './products';
+import db from './fireStoreData.js';
+
 
 function App() {
+  
   return (
-    <div>
-      <Products />
-    </div>
-  );
-}
+    < Products />
+      )
+  }
 
 export default App;
