@@ -5,6 +5,8 @@ import NavbarImg from './navbar/Nav';
 import Products from './products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './home';
+import SignIn from './sign';
+import SignUp from './signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
@@ -18,6 +20,9 @@ function App() {
       <Route path="/shoppingcard" component={ShoppingCard} />
       < NavbarImg />      
       < Home />
+      <SignUp path="signUp" />
+          <SignIn path="/" />
+          {/* <PasswordReset path = "passwordReset" /> */}
     < Products path="/products"/>
     </Router>
   
