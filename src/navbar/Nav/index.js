@@ -7,7 +7,7 @@ const NavbarImg = () => {
     return (
         <>
         <div>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
         {/* <span class="navbar-brand mb-0 h1"> <Link to = "/ Navbar"></Link></span> */}
         <span class="navbar-brand mb-0 h1"> <Link to = "/Shopping Card" ></Link></span>
         </nav>

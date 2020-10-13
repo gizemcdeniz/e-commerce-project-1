@@ -5,7 +5,8 @@ import {CardDeck} from 'react-bootstrap';
 import {Card} from 'react-bootstrap';
 import {Container} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
-import {Coli } from 'react-bootstrap';
+import {Col } from 'react-bootstrap';
+import { useHistory } from "react-router-dom";
 
 const Product = (props) => {
     const [like, setLike] = useState(0);
@@ -16,8 +17,15 @@ const Product = (props) => {
 
     const style = {
       width: '30%',
-      display: 'flex'
     }
+
+    let history = useHistory();
+    const routeChange = () => {
+      let path = "/shoppingcard"
+      history.push(path)
+     
+    }
+
     return (
         <>
         {/* <div className="tshirtSection">
@@ -32,10 +40,10 @@ const Product = (props) => {
             </div> */}
 
 
-<div className='row'>
+<div>
      <CardDeck style={style}>
   <Card >
-    <Card.Img variant="top" src={props.img}/>
+    <Card.Img variant="top" src={props.img} onClick={routeChange}/>
     <Card.Body>
       <Card.Title>{props.name}</Card.Title>
       <Card.Text>

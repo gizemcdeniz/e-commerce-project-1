@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import db from '../fireStoreData';
 import Product from '../product'
+import {Row} from 'react-bootstrap';
 
 const Products = () => {
 
@@ -32,9 +33,11 @@ console.log(theProducts);
 
 
     return (
+     <Row>
         <div>
-           {theProducts.map ( product => <Product {...product} /> )} 
+           {theProducts.map ( product => <Product {...product} />)} 
         </div>
+        </Row>
     ) 
     
 }

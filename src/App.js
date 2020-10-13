@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import Products from './products';
 import db from './fireStoreData.js';
+import ShoppingCard from './navbar/ShoppingCard';
 import NavbarImg from './navbar/Nav';
+import Products from './products';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ShoppingCard from './navbar/ShoppingCard'
+import Home from './home';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
 
 
 function App() {
@@ -15,9 +15,10 @@ function App() {
     <Router>
       {/* <Route path="/" component={NavbarImg} /> */}
       {/* <Route exact path="/" component={Home} /> */}
-      <Route path="/Shopping Card" component={ShoppingCard} />
-      < NavbarImg />
-    < Products />
+      <Route path="/shoppingcard" component={ShoppingCard} />
+      < NavbarImg />      
+      < Home />
+    < Products path="/products"/>
     </Router>
   
     </>
