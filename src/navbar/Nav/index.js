@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import Link from "react-router-dom";
 
 
 const NavbarImg = () => {
     return (
         <>
-        <div>
-        <nav class="navbar navbar-dark bg-dark">
-        {/* <span class="navbar-brand mb-0 h1"> <Link to = "/ Navbar"></Link></span> */}
-        <span class="navbar-brand mb-0 h1"> <Link to = "/Shopping Card" ></Link></span>
-        </nav>
-        </div>
+        <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#link">Link</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+            </Navbar>
         </>
     )
 }

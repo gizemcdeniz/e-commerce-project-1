@@ -16,8 +16,7 @@ const Product = (props) => {
     });
 
     const style = {
-      width: '70%',
-  
+      width: '30%',
     }
 
     let history = useHistory();
@@ -44,7 +43,7 @@ const Product = (props) => {
 <div>
      <CardDeck style={style}>
   <Card >
-    <Card.Img variant="top" src={props.img} style={{width: '80%'}} onClick={routeChange}/>
+    <Card.Img variant="top" src={props.img} onClick={routeChange}/>
     <Card.Body>
       <Card.Title>{props.name}</Card.Title>
       <Card.Text>
@@ -58,6 +57,7 @@ const Product = (props) => {
     <button id="likeButton" onClick= {() => setLike(like + 1)} >Like {like}</button>
     </Card.Footer>
   </Card>
+  
 </CardDeck>
 </div>
         </>
