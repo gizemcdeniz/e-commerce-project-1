@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import db from '../fireStoreData';
-import Product from '../product'
-import {Row} from 'react-bootstrap';
+import db from '../firebase/FireStoreData';
+import Product from '../components/product'
+import Row from 'react-bootstrap';
 
 const Products = () => {
 
@@ -25,12 +25,6 @@ const Products = () => {
     setTheProducts(Products)
 
   }
-
-  const style = {
-    display: 'flex',
-    flexDirection: 'row'
-
-  }
 console.log(theProducts);
 
   useEffect(()=>{
@@ -40,11 +34,11 @@ console.log(theProducts);
 
     return (
      <Row>
-        <div style={style}>
+        <div>
            {theProducts.map ( product => <Product {...product} />)} 
         </div>
         </Row>
     ) 
     
 }
-export default Products
+export default Products;
